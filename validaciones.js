@@ -59,9 +59,9 @@
     validar_contrasena(stringB);
 
         if stringA.trim() != stringB.trim() ) {
-         return false;
+         return true;
         }else {
-          return true;  }
+          return false;  }
 
        
   }
