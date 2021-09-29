@@ -58,7 +58,7 @@
     validar_contrasena(stringA);
     validar_contrasena(stringB);
 
-        if (document.getElementById('in_contrasena').value != document.getElementById('in_confirmar_contrasena').value) {
+        if stringA.trim() != stringB.trim() ) {
          return false;
         }else {
           return true;  }
