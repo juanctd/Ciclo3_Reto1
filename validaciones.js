@@ -1,3 +1,19 @@
+let registros = [];
+
+function agregarRegistro() {
+
+}
+
+function OrdenarArreglo(arreglo) {
+
+
+}
+
+
+
+
+
+
 
  function validar_nombre_usuario(string) {
     // El input que queremos validar
@@ -7,7 +23,7 @@
     var pattern = new RegExp('^[a-zA-Z]*$', 'i');
 
     // Primera validacion, si input esta vacio entonces no es valido
-
+ }
         
    if(input.value.length <=5 ){
         return false;
@@ -58,7 +74,7 @@
     validar_contrasena(stringA);
     validar_contrasena(stringB);
 
-        if stringA.trim() != stringB.trim() ) {
+        if (stringA.trim() != stringB.trim() ) {
          return true;
         }else {
           return false;  }
@@ -69,3 +85,10 @@
   module.exports.validar_nombre_usuario = validar_nombre_usuario;
   module.exports.validar_contrasena = validar_contrasena;
   module.exports.confirmar_contrasena = confirmar_contrasena;
+
+  module.exports.registros = this.registros;
+  module.exports.OrdenarArreglo = OrdenarArreglo;
+  module.exports.agregarRegistro = agregarRegistro;
+  
+
+
