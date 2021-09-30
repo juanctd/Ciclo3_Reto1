@@ -86,7 +86,7 @@ function OrdenarArreglo(arreglo) {
   module.exports.validar_contrasena = validar_contrasena;
   module.exports.confirmar_contrasena = confirmar_contrasena;
 
-  module.exports.registros = this.registros;
+  module.exports.registros = registros;
   module.exports.OrdenarArreglo = OrdenarArreglo;
   module.exports.agregarRegistro = agregarRegistro;
   
