@@ -1,7 +1,12 @@
 let registros = [];
 
 function agregarRegistro() {
-
+ 
+ var usuario = document.getElementById('in_nombre_usuario');
+ var contrasena = document.getElementById('contrasena');
+ var confirmar_contrasena = document.getElementById('confirmar_contrasena')
+ registros.push({usuario:'usuario', contrasena:'contrasena', validar_contrasena:'validar_contrasena'});
+ 
 }
 
 function OrdenarArreglo(arreglo) {
