@@ -1,24 +1,43 @@
+/* reto3 */
+
 let registros = [];
 
-function agregarRegistro() {
- 
- var usuario = document.getElementById('in_nombre_usuario');
- var contrasena = document.getElementById('contrasena');
- var confirmar_contrasena = document.getElementById('confirmar_contrasena')
- registros.push({usuario:'usuario', contrasena:'contrasena', validar_contrasena:'validar_contrasena'});
- 
+function agregarRegistro() 
+{
+  var usuario=document.getElementById('in_usuario').value;
+  
+  var contrasena=document.getElementById('in_contrasena').value;
+  var confirmar_contrasena=document.getElementById('in_confirmar_contrasena').value;
+  registros.push({"usuario":usuario, "contrasena":contrasena, "confirmar_contrasena":confirmar_contrasena});
+  
+  
 }
 
 function OrdenarArreglo(arreglo) {
+  
+var ar = registros.sort(function(a, b)
+{
+  var nA = a.usuario.toLowerCase();
+  var nB = b.usuario.toLowerCase();
+
+  if(nA < nB)
+    return -1;
+  else if(nA > nB)
+    return 1;
+ return 0;
+});
 
 
+   return ar;
 }
+  module.exports.registros = registros;
+  module.exports.OrdenarArreglo = OrdenarArreglo;
+  module.exports.agregarRegistro = agregarRegistro;
 
 
 
-
-
-
+/*
+reto2 
 
  function validar_nombre_usuario(string) {
     // El input que queremos validar
@@ -91,9 +110,6 @@ function OrdenarArreglo(arreglo) {
   module.exports.validar_contrasena = validar_contrasena;
   module.exports.confirmar_contrasena = confirmar_contrasena;
 
-  module.exports.registros = registros;
-  module.exports.OrdenarArreglo = OrdenarArreglo;
-  module.exports.agregarRegistro = agregarRegistro;
-  
+*/
 
 
