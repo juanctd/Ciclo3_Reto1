@@ -2,28 +2,38 @@ let registros = [];
 
 function validar_captcha(rcaptcha) 
 {
-    if ( rcaptcha=="5") {
+ var ca=rcaptcha;
+ 
+    if (ca == 5) {
         return true;
-
                 }else {
             return false;
         }
-  
-  
-}
+  }
 
-function iniciar_session(usuario,contrasena,rchaptcha) {
+function iniciar_sesion(usuario,contrasena,rcaptcha) {
+    
+    registros.push({"usuario":usuario, "contrasena":contrasena, "rcaptcha":rcaptcha});
+    const r=validar_captcha(registros[0].rcaptcha); 
+    const u=registros[0].usuario;
+    const c=registros[0].contrasena;
 
-    var usuario=document.getElementById('login_username').value;
-  
-    var contrasena=document.getElementById('login_password').value;
+    if (r == false) {
+        return false;
+     } else { 
+        return true; }
+           
+    if(u.length == 0 ){
+        return false;
+      } else {  if (r == true) {
+        return true; }    
 
-    var rchaptcha=document.getElementById('login_captcha').value;
-
-    registros.push({"usuario":usuario, "contrasena":contrasena, "rchaptcha":rchaptcha});
-
+    if(c.length == 0 ){
+          return false;
+        }
+    
 }
 
 module.exports.registros = registros;
-module.exports.validar_captcha=validar_captcha;
-module.exports.iniciar_session=iniciar_session;
+module.exports.validar_captcha = validar_captcha;
+module.exports.iniciar_sesion = iniciar_sesion;
